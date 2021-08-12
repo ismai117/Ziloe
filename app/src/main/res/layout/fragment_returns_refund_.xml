@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#ffffff"
+    tools:context=".view.fragments.returnsAndrefund.ReturnsRefund_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/about_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Returns &amp; Refunds"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/line_mark"
+        android:layout_width="50dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/about_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#000000" />
+
+
+        <TextView
+            android:id="@+id/p1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_mark"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="15dp"
+            android:lineSpacingExtra="5dp"
+            android:padding="8dp"
+            android:text="ZILOE will happily accept returns due to change of mind as long as a request to return is received by us within 14 days of receipt of item and are returned to us in original packaging, unused and in resellable condition."/>
+
+        <TextView
+            android:id="@+id/p2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/p1"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:lineSpacingExtra="5dp"
+            android:padding="8dp"
+            android:text="Return shipping will be paid at the customers expense and will be required to arrange their own shipping."/>
+
+        <TextView
+            android:id="@+id/p3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/p2"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:lineSpacingExtra="5dp"
+            android:padding="8dp"
+            android:text="Once returns are received and accepted, refunds will be processed to store credit for a future purchase. We will notify you once this has been completed through email."/>
+
+        <TextView
+            android:id="@+id/p4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/p3"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:lineSpacingExtra="5dp"
+            android:padding="8dp"
+            android:text="(ZILOE) will refund the value of the goods returned but will NOT refund the value of any shipping paid."/>
+    </RelativeLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:clickable="true"
+    tools:context=".view.fragments.about.About_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/about_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="About Us"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/line_mark"
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/about_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="#000000" />
+
+
+            <TextView
+                android:id="@+id/p1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line_mark"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="2dp"
+                android:padding="8dp"
+                android:text="Inspired by our home Somaliland, ZILOE is bringing elegance and timeless creation with premium products. We relish making travel goods for the stylish traveler!" />
+
+
+            <TextView
+                android:id="@+id/p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_below="@id/p1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="2dp"
+                android:padding="8dp"
+                android:text="We love to travel the globe and experience the richness the world has to offer - so ZILOE ensures we make only the most stylish travel companions for globetrotters. Our range of goods includes the most elegant bags and clothing - ideal for travel." />
+
+
+            <TextView
+                android:id="@+id/p3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/p2"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="2dp"
+                android:padding="8dp"
+                android:text="As we grow as a business, \n\nWe aim to develop with style." />
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/p4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/p3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                android:text="Like all travellers, our home is what grounds us, and while we explore the world, our hearts and souls look back there. The ZILOE emblem symbolises the creator's love for home in Somaliland. The symbol and the product combine the best of travel with love for home." />
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/p5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/p4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="2dp"
+                android:padding="8dp"
+
+                android:text="ZILOE knows travel can be uncomfortable - but it doesn't need to be. Thus, ZILOE was born so that anyone who wishes to can travel with style." />
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/black"
+                android:id="@+id/p6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/p5"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="2dp"
+                android:padding="8dp"
+
+                android:text="We hope as you grow and move, wherever you are in the world, we will connect with you as you make use of our premium range. You deserve the best, so we present to you ZILOE - travel with style. " />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

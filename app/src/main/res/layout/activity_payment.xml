@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cart_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/logo" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/summary_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/cart_logo"
+            android:layout_marginTop="10dp"
+            android:background="#F6F6F6">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.615"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/info_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="Show order summary"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.512" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shipping_price_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:text="0"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.512" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/shipping_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/summary_layout"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="#a56600"
+                android:id="@+id/summary_cartText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:onClick="backToCart"
+                android:text="Cart"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:textColor="#a56600"
+                android:id="@+id/summary_infoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:onClick="backtoInfo"
+                android:text="Information"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:onClick="backtoShipping"
+                android:textColor="#a56600"
+                android:id="@+id/summary_ShippingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Shipping"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:textColor="#a56600"
+                android:id="@+id/summary_payText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Payment"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#F6F6F6"
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/shipping_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Contact" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/pay_show_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shipto"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/contact"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="10dp"
+            android:background="#F6F6F6"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Ship to" />
+
+            <TextView
+                android:id="@+id/pay_show_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#F6F6F6"
+            android:id="@+id/method"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@id/shipto"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Method" />
+
+            <TextView
+                android:text="@string/_2_to_4_days_business_days_standard_free_delivery"
+                android:textColor="@color/black"
+                android:id="@+id/pay_show_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/discount_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discount"/>
+
+
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@id/discount_title"
+                android:layout_below="@id/discount_title"
+                android:textSize="14sp"
+                android:hint="Discount code"
+                android:id="@+id/discountInput"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_alignBottom="@id/discountInput"
+                android:layout_below="@id/discount_title"
+                android:layout_alignTop="@id/discountInput"
+                android:layout_toEndOf="@id/discountInput"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/right_arrow"/>
+
+
+        <TextView
+            android:id="@+id/billing_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Billing Address"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/discountInput"
+            android:layout_margin="15dp"/>
+
+        <TextView
+            android:id="@+id/select_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the address that matches your card or payment method."
+            android:layout_below="@id/billing_title"
+            android:layout_marginLeft="15dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_below="@id/select_title"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/billing_box1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <CheckBox
+                android:id="@+id/sameBilling_checkbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="Same as shipping address"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.523" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_below="@id/billing_box1"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/billing_box2"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <CheckBox
+                android:id="@+id/differentBilling_checkbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="Use a different billing address"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.523" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/newaddress_layout"
+            android:layout_below="@id/billing_box2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_fnameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/shipping_title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="First name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_fnameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_lnameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:hint="Last name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_lnameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:hint="Address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_addressInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_buildingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginRight="20dp"
+                android:hint="Apartment, suite, etc. (optional)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_buildingInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_cityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginRight="20dp"
+                android:hint="City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_cityInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_countryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginRight="20dp"
+                android:hint="Country/region">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_countryInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_postcodeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginRight="20dp"
+                android:hint="Postcode">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_postcodeInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_phoneLayout"
+                android:layout_marginBottom="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:hint="Phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_phoneInput"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rememberMe_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember me"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/newaddress_layout"
+            android:layout_margin="15dp"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_below="@id/rememberMe_title"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/rememberMe_box"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <CheckBox
+                android:id="@+id/rememberMe_checkbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="Save me information for a ast checkout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.523" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay now"
+            android:layout_margin="15dp"
+            android:id="@+id/payNow_btn"
+            android:background="@color/black"
+            android:layout_below="@id/rememberMe_box"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:onClick="returnToShip"
+            android:id="@+id/returnToShip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payNow_btn"
+            android:text="Return to information"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="All rights reserved ZILOE"
+            android:layout_below="@id/returnToShip"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

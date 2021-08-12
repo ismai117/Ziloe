@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".view.activites.CheckOut_Activity">
+
+        <ImageView
+            android:id="@+id/cart_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/cart_logo"
+            android:layout_width="wrap_content"
+            android:hint="Hey"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/confirm_text"
+            android:textColor="#a56600"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your order is confirmed"
+            android:layout_below="@id/user_name"/>
+
+
+        <TextView
+            android:layout_margin="20dp"
+            android:lineSpacingExtra="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/thankyou_message"
+            android:layout_below="@id/confirm_text"
+            android:text="Thanks for shopping at ZILOE, We have received \nyour order."
+            />
+
+
+        <TextView
+            android:textColor="@color/black"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/thankyou_message"
+            android:id="@+id/nextStep_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We'll send you another email once your order has been dispatched. if we have any problems with your order we will contact you"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/thanks_text"
+                android:text="Thanks,"
+                android:layout_below="@+id/nextStep_message"
+                android:layout_margin="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/ziloeTeam_text"
+               android:layout_marginLeft="20dp"
+               android:layout_marginBottom="10dp"
+               android:textColor="@color/black"
+               android:text="ZILOE Customer Care"
+               android:layout_below="@id/thanks_text"/>
+
+        <LinearLayout
+            android:id="@+id/total_layout"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_below="@id/ziloeTeam_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textColorHint="#a56600"
+                android:textColor="#a56600"
+                android:id="@+id/confirmation_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Confirmaiton number: " />
+
+            <TextView
+                android:textColorHint="@color/black"
+                android:id="@+id/confirm_subtotal"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="SubTotal: "/>
+
+            <TextView
+                android:textColorHint="@color/black"
+                android:id="@+id/tax"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Tax: 0 "/>
+
+            <TextView
+                android:textColorHint="@color/black"
+                android:id="@+id/confirm_total"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Total: "/>
+
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:onClick="BacktoHome"
+            android:text="Close"
+            android:textColor="#a56600" />
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

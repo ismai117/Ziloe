@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="all">
+    <item android:id="@+id/home"  android:title="Home">
+    </item>
+    <item android:id="@+id/ziloe_gallary" android:title="Ziloe Gallery">
+
+    </item>
+    <item android:id="@+id/about_us" android:title="About Us">
+
+    </item>
+    <item android:id="@+id/contact_us" android:title="Contact Us">
+
+    </item>
+
+
+    <item android:id="@+id/privacy" android:title="Privacy Policy">
+
+    </item>
+    <item android:id="@+id/refunds" android:title="Returns &amp; Refunds ">
+
+    </item>
+    <item android:id="@+id/service" android:title="Terms &amp; Services">
+
+    </item>
+</group>
+
+</menu>
